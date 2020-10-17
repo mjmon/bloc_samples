@@ -19,11 +19,13 @@ class CounterView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
+            key: Key('counterView_increment_floatingActionButton'),
             child: Icon(Icons.add),
             onPressed: () => context.bloc<CounterCubit>().increment(),
           ),
           SizedBox(height: 10),
           FloatingActionButton(
+            key: Key('counterView_decrement_floatingActionButton'),
             child: Icon(Icons.remove),
             onPressed: () => context.bloc<CounterCubit>().decrement(),
           ),
